@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>HomeWork19</title>
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -14,31 +16,33 @@
 
                 <div id="div1" class="wrapDiv">
                     <label for="number">Card Number</label>
-                    <input class="long" type="number" id="number" name="number" placeholder="1234 5678 9012 3456">
+                    <input class="long" type="text" id="number" name="number"
+                           onkeyup="myFunction()" placeholder="1234 5678 9012 3456" required minlength="16" maxlength="16" pattern="[0-9]*">
                 </div>
 
                 <div id="div2" class="wrapDiv">
                     <label for="name">Name On Card</label>
-                    <input class="long" type="text" id="name" name="name" placeholder="Name Surname">
+                    <input class="long" type="text" id="name" name="name"
+                           onkeyup="myFunction()" placeholder="NAME SURNAME" required pattern="[A-Za-z]+(\s[A-Za-z]+)">
                 </div>
 
                 <div class="flexDiv">
                     <div id="div3" class="inlineDiv">
                         <label for="day">Expiry Date</label>
-                        <input class="short" type="number" id="day" name="day" placeholder="01">
+                        <input class="short" type="number" id="day" name="day" placeholder="01" required min="1" max="12">
 
                     </div>
 
                     <div id="div4" class="inlineDiv">
-                        <input class="short" type="number" id="year" name="year" placeholder="1990">
+                        <input class="short" type="number" id="year" name="year" placeholder="1990" required min="1000" max="3000">
                     </div>
 
                     <div id="div5" class="inlineDiv">
                         <label for="cvv">CVV / CVN</label>
-                        <input class="short" type="password" id="cvv" name="cvv" placeholder="***">
+                        <input class="short" type="password" id="cvv" name="cvv" placeholder="***" required minlength="3" maxlength="3" pattern="[0-9]*">
                     </div>
 
-                    <input class="sendButton" type="submit" value="Send" class="send">
+                    <input type="submit" value="Send" class="send" id="button" disabled>
 
                 </div>
 

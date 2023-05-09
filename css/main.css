@@ -44,17 +44,22 @@ label{
 
 input{
     border: none;
-    border-bottom: #ff577f solid 1px;
-    background-color: rgba(138, 43, 226, 0.73);
-
+    /*border-bottom: #25b616 solid 1px;*/
+    /*border: #25b616 solid 1px;*/
+    background-color: rgba(43, 86, 226, 0.65);
+    /*box-shadow: #25b616 4px 4px 1px inset;*/
+    box-shadow: inset 2px 2px 3px rgba(154, 147, 140, 0.5),
+                1px 1px 3px rgba(255, 255, 255, 1);
     height: 30px;
     color: white;
     padding-left: 10px;
+
 }
 
-/*#div1{*/
-/*    margin-top: 45px;*/
-/*}*/
+input:invalid{
+    background-color: rgba(255, 87, 127, 0.75);
+}
+
 
 div{
     margin-top: 20px;
@@ -82,11 +87,17 @@ div{
     margin-top: 0;
 }
 
-.sendButton{
+.send{
     padding: 0 10px;
     width: 80px;
-    border: #ff577f solid 1px;
+    border: #25b616 solid 1px;
     border-radius: 0.3cm;
+    box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5);
+}
+
+.send:disabled{
+    border: #ff577f solid 1px;
+    color: gray;
 }
 
 input::-webkit-outer-spin-button,
