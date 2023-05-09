@@ -1,8 +1,6 @@
 $(document).ready($('.long').val(''))
 $(document).ready($('.short').val(''))
-let cardNum = 0
-const arr = []
-
+let prevLen = 0
 
 function myFunction() {
     // if ($('#number').prop('valid', true)) {
@@ -39,15 +37,14 @@ function myFunction() {
 
 
     let num = $('#number').val()
-    console.log('num = ' + num)
     let len = num.length
-    console.log('len = ' + len)
-
-    if (len == 4 || len == 9 || len == 14) {
+    if ((len == 4 || len == 9 || len == 14) && len > prevLen) {
         $('#number').val(num + ' ')
-        console.log()
+    } else if (len == 16 && num.indexOf(' ') == -1) {
+        const arr = [num.substring(0,4),num.substring(4,8),num.substring(8,12),num.substring(12,16)]
+        $('#number').val(arr.join(' '))
     }
-
+    prevLen = len
 
 }
 
