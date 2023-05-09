@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Corbel, Serif;
+    background-color: gray;
+}
+
+fieldset{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*display: block;*/
+
+    background-image: url("../img/back.jpg");
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: black 10px 10px 10px;
+
+    width: 12.9cm;
+    height: 8.1cm;
+    border: none;
+    border-radius: 0.3cm;
+    margin: 20vh auto;
+    padding-left: 30px;
+    padding-top: 35px;
+}
+
+legend{
+    position: relative;
+    left: -40px;
+    top: 40px;
+    width: 10cm;
+    background-color: coral;
+    padding: 3% 10%;
+    font-weight: bold;
+}
+
+label{
+    display: block;
+    color: white;
+}
+
+input{
+    border: none;
+    border-bottom: #ff577f solid 1px;
+    background-color: rgba(138, 43, 226, 0.73);
+
+    height: 30px;
+    color: white;
+    padding-left: 10px;
+}
+
+/*#div1{*/
+/*    margin-top: 45px;*/
+/*}*/
+
+div{
+    margin-top: 20px;
+}
+
+.long{
+    width: 300px;
+}
+
+.short{
+    width: 80px;
+}
+
+.inlineDiv{
+    display: inline-block;
+
+}
+
+.flexDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 410px;
+    margin-top: 0;
+}
+
+.sendButton{
+    padding: 0 10px;
+    width: 80px;
+    border: #ff577f solid 1px;
+    border-radius: 0.3cm;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
