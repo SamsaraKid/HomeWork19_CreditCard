@@ -1,7 +1,7 @@
 $(document).ready($('.long').val(''))
 $(document).ready($('.short').val(''))
-let prevLen = 0
-let arr = []
+
+// let arr = []
 
 function myFunction() {
 
@@ -12,7 +12,7 @@ function myFunction() {
 
 
     let num = $('#number').val().replaceAll(' ','')
-    arr = [num.substring(0,4),num.substring(4,8),num.substring(8,12),num.substring(12,16)]
+    const arr = [num.substring(0,4),num.substring(4,8),num.substring(8,12),num.substring(12,16)]
     let firstEmpty = arr.indexOf('')
     if (firstEmpty != -1) {
         arr.splice(firstEmpty, 3)
